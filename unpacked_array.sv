@@ -7,7 +7,8 @@ module test;
 		my_array=8'b11011101;
       $display("value of my_array is =%0d",my_array);
       
-      for (int i=0;i<$size(my_array);i++)
+     // for (int i=0;i<$size(my_array);i++)
+	foreach(my_array[i])
         $display("my_array[%0d]=%0d",i,my_array);
 
       
@@ -25,7 +26,8 @@ module test;
       
       $display("value of my_array=%0b",my_array);
       
-      for(int i;i<$size(my_array);i++)
+     // for(int i;i<$size(my_array);i++)
+	foreach(my_array[i])
         $display("value of my_array[%0d]=%0b",i,my_array[i]);
       
       
