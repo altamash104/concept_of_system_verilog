@@ -1,3 +1,10 @@
+/*
+1.An array whose size can be set or changed at runtime simulation
+2.By default, the size of dynamic array is zero unless a new[] is used
+
+	syntax: data_type  array_name[];
+*/
+
 module dynamic_array;
   int da1[];
   int da2[];
