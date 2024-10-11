@@ -76,6 +76,17 @@ module array_locator;
       $display("array2  OR(|) =%0d",array2.or);//bitwise or
       
       $display("array2  XOR(^) =%0d",array2.xor);//bitwise xor
+
+      //array iterator index querying
+     // Array iterator index querying methods shall operate on both index and element
+     
+      $display("array2=%p",array2);
+      q=array2.find(item) with(item>item.index); ///return the array element whose value is greater than the index value.
+                                            
+      $display("q=%p",q);
+      q=array2.find(item) with(item==item.index);// return the array element whose value is equal to the index value.
+                                            
+      $display("q=%p",q);
       
     end
 endmodule
