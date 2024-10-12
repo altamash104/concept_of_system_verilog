@@ -1,11 +1,11 @@
 /*
 1.queue is  variable size ordered collection of same data type.
-2.Unlike static and dynamic arrays, this size of a queue can change dynamically during runtime as elements are added or removed.
-3.queue provide power full,flexible data structure that operates like a FIFO,LIFO.
+2.Unlike static and dynamic arrays, the size of a queue can change dynamically during runtime as elements are added or removed.
+3.Queue provide power full,flexible data structure that operates like a FIFO,LIFO.
 4.In dynamic array we allocate the size of memory during the runtime with the help of "new[]" constructor.
-5.means we are allocating the memory and then we are inserting the element
-6.but in case of queue we don't have to allocate the memory we just insert the element and memory will automatically added
-7.means queue can automatically grow and shrink.
+means we are allocating the memory and then we are inserting the elements.
+5.But in case of queue we don't have to allocate the memory we just insert the element and memory will automatically allocated
+means queue can automatically grow and shrink.
 */
 module queue;
   int q1[$];//unbounded queue
@@ -22,9 +22,6 @@ module queue;
       
       $display ("the element of queue after insertion:q1=%0p",q1);
       $display ("the size of queue :q1=%0p",q1.size());
-      
-      //q1.insert(0,q2);
-      //$display ("the element of queue:q2=%0p",q2);
       
       q1.push_front(5);
       $display ("the element of queue after push_front:q1=%0p",q1);
@@ -57,7 +54,7 @@ module queue;
     end
 endmodule
 
-//Bounded queue
+/////////Bounded queue///////////
 module bounded_queue;
   bit[31:0] q[$:3]; //bounded queue
   
@@ -76,7 +73,7 @@ module bounded_queue;
     end
 endmodule
 
-//Queue inside queue
+///////////////Queue inside queue//////////////
 module test();
   int q1[$]={0,1,5,6,7,8};
   int q2[$]={2,3,4};
