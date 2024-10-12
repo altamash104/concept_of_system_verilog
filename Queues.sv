@@ -75,3 +75,25 @@ module bounded_queue;
         $display("q[%0d]=%0d",i,q[i]);
     end
 endmodule
+
+//Queue inside queue
+module test();
+  int q1[$]={0,1,5,6,7,8};
+  int q2[$]={2,3,4};
+  
+  initial
+    begin
+      
+      //with method
+      foreach(q2[i])
+      q1.insert(i+2,q2[i]);
+       $display("after inserting the content of %0p",q1);
+      $display("content of q2 %0p",q2);
+      
+     /* //without method
+      //foreach (q2[i])
+      q1={q1[0:1],q2,q1[2:$]};
+      $display("after inserting the content of %0p",q1);
+      $display("content of q2 %0p",q2);*/
+    end
+endmodule
