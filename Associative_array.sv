@@ -13,8 +13,8 @@
 module test;
   
   int a_array[int];
-  
-  		initial
+        
+        initial
           begin
             int i;
             repeat(20)
