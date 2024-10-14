@@ -29,4 +29,28 @@ module test;
           end
   
 endmodule
-        
+
+//exaple1(correct simulation on questa)
+module a_array;
+  
+  int a_array1[string]; //integer array with string index
+  string a_array2[string]; //string array with string string index
+  
+  initial
+    begin
+      a_array1='{"Digital":5,"Verilog":10,"systemverilog":20,"UVM":30};
+      $display("\n size of an array1 is %0d",a_array1.size());
+      
+      foreach(a_array1[i])
+        $display("a_array1[%0d]=%0d",i,a_array1[i]);
+      
+      
+      a_array2='{"Name":"Altamash","Sub":"SV","year":"2024"};
+      $display("\n size of a_array2 is %0d",a_array2.size());
+      
+      foreach(a_array2[i])
+        $display("a_array1[%0d]=%0d",i,a_array2[i]);
+      
+      
+    end
+endmodule
