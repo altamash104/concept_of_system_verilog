@@ -9,3 +9,24 @@
 5.Associative arrays are excellent for creating lookup tables or mapping values.For instance, you can use them to store configuration settings. 
 */
 
+//initialization of associative array
+module test;
+  
+  int a_array[int];
+  
+  		initial
+          begin
+            int i;
+            repeat(20)
+              begin
+                a_array[i]=$urandom_range(1,100);
+                 i=i++;
+              end
+            foreach(a_array[i])
+              $display("a_array[%0d]=%0p",i,a_array[i]);
+            $display("value of a_array:=%0p",a_array);
+                
+          end
+  
+endmodule
+        
