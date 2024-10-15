@@ -57,3 +57,71 @@ module a_array;
       $display("------------------------------------------");
     end
 endmodule
+
+//methods of associative array
+
+module a_array_methods;
+  bit[7:0] array[int];
+  int index;
+  
+  initial
+    begin
+      array[4]=2;
+      array[10]=5;
+      array[6]=7;
+      array[20]=8;
+      array[13]=9;
+      array[16]=12;
+      
+      foreach(array[i])
+        $display("array[%0d]=%0d",i,array[i]);
+      
+      //Print array size and number of enteries
+      
+      $display("size of an array =%0d,number of entries=%0d",array.size(),array.num());
+      
+      //exists method
+      
+      if(array.exists(4))
+        $display("An element exists at index=4");
+      else
+        $display("An element doesn't exist at index=4");
+      if(array.exists(11))
+        $display("An element exists at index=11");
+      else
+        $display("An element doesn't exist at index=11");
+      
+      //first method
+      
+      array.first(index);
+      $display("first index of array=%0d",index);
+      
+      //last method
+      array.last(index);
+      $display("last index of array=%0d",index);
+      
+      //prev index
+      index=13;
+      array.prev(index);
+      $display("previous index of 13 is =%0d",index);
+      
+      //next index
+       index=13;
+      array.next(index);
+      $display("next index of 13 is =%0d",index);
+      
+      //array delete index
+      
+      array.delete(10);
+      $display("After deleting element having index 10");
+      foreach(array[i])
+        $display("array[%0d]=%0d",i,array[i]);
+      $display("----------------------------");
+      
+      //deleting complete array
+      
+      array.delete();
+      $display("size=%0d of array",array.size());
+ 
+    end      
+endmodule
