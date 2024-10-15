@@ -45,7 +45,7 @@ module a_array;
         begin
           $display("a_array1[%0s]=%0d",i,a_array1[i]);
         end
-       $display("\n size of an array1 is %0d",a_array1.size());
+       $display("size of an array1 is %0d",a_array1.size());
        $display("------------------------------------------");
       
       
@@ -53,7 +53,7 @@ module a_array;
          begin
            $display("a_array1[%0s]=%0d",i,a_array2[i]);
          end
-      $display("\n size of a_array2 is %0d",a_array2.size());
+      $display("size of a_array2 is %0d",a_array2.size());
       $display("------------------------------------------");
     end
 endmodule
