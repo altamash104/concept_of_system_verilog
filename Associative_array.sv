@@ -72,6 +72,9 @@ module a_array_methods;
       array[20]=8;
       array[13]=9;
       array[16]=12;
+
+       //we can also write the array like this       
+      //array='{4:2,10:5,6:7,20:8,13:9,16:12};
       
       foreach(array[i])
         $display("array[%0d]=%0d",i,array[i]);
