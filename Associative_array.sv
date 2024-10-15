@@ -51,7 +51,7 @@ module a_array;
       
        foreach(a_array2[i])
          begin
-           $display("a_array1[%0s]=%0d",i,a_array2[i]);
+             $display("a_array1[%0s]=%0s",i,a_array2[i]);
          end
       $display("size of a_array2 is %0d",a_array2.size());
       $display("------------------------------------------");
