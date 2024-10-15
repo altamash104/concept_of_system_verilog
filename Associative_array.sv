@@ -24,7 +24,7 @@ module test;
               end
             foreach(a_array[i])
               $display("a_array[%0d]=%0p",i,a_array[i]);
-            $display("value of a_array:=%0p",a_array);
+              $display("value of a_array:=%0p",a_array);
                 
           end
   
@@ -81,7 +81,7 @@ module a_array_methods;
       
       //Print array size and number of enteries
       
-      $display("size of an array =%0d,number of entries=%0d",array.size(),array.num());
+        $display("size of an array =%0d,number of entries=%0d",array.size(),array.num());
       
       //exists method
       
@@ -97,7 +97,7 @@ module a_array_methods;
       //first method
       
       array.first(index);
-      $display("first index of array=%0d",index);
+        $display("first index of array=%0d",index);
       
       //last method
       array.last(index);
