@@ -30,7 +30,7 @@ module test;
   
 endmodule
 
-//exaple1(correct simulation on questa)
+//exaple1
 module a_array;
   
   int a_array1[string]; //integer array with string index
@@ -39,18 +39,21 @@ module a_array;
   initial
     begin
       a_array1='{"Digital":5,"Verilog":10,"systemverilog":20,"UVM":30};
-      $display("\n size of an array1 is %0d",a_array1.size());
+      a_array2='{"Name":"Altamash","Sub":"SV","year":"2024"};
       
       foreach(a_array1[i])
-        $display("a_array1[%0d]=%0d",i,a_array1[i]);
+        begin
+          $display("a_array1[%0s]=%0d",i,a_array1[i]);
+        end
+       $display("\n size of an array1 is %0d",a_array1.size());
+       $display("------------------------------------------");
       
       
-      a_array2='{"Name":"Altamash","Sub":"SV","year":"2024"};
+       foreach(a_array2[i])
+         begin
+           $display("a_array1[%0s]=%0d",i,a_array2[i]);
+         end
       $display("\n size of a_array2 is %0d",a_array2.size());
-      
-      foreach(a_array2[i])
-        $display("a_array1[%0d]=%0d",i,a_array2[i]);
-      
-      
+      $display("------------------------------------------");
     end
 endmodule
