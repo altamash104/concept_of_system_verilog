@@ -3,7 +3,7 @@
 1.It is a subroutine which is used to perform a set of instructions to be executed and called whenever needed.
 2.The argument has to be input type and atleast one has to be passed.
 3.It can enable another funtcion only can not enable other task .
-4.It should be executed in zero simulation time and can not have delay , timing or timing control statements.
+4.It should be executed in zero simulation time and can not have delay(@,#,wait) , timing or timing control statements.
 
 ##TASK
 1.It is a subroutine which is used to perform a set of instructions to be executed and called whenever needed.
@@ -65,4 +65,68 @@ module my_function3;
       $display("value of s=%0d",s);
     end
 endmodule
+//////////pass by value/////////////////
+
+module pass_by_value;
+  int x,y,z;
+  
+  function int sum(int x,y);
+    x=x+y;//x=50  the change in the value of  arguments x ,y will not be visible outside the function
+    y=x+y;//y=80
+    return x+y;//((x+y)+y)=130
+  endfunction
+    
+    initial
+      begin
+        
+        x=20;
+        y=30;
+        $display ("x=%0d y=%0d",x,y);
+        z=sum(x,y);
+        $display ("x=%0d y=%0d z=%0d",x,y,z);
+      end
+    endmodule
+/*
+Simulation result
+x=20 y=30
+x=20 y=30 z=130
+*/
 ////////////////////////////////////////////////////
+module pass_by_ref;
+  int x,y,z;
+  
+  function int sum(ref int x,y);
+    x=x+y;//x=50  the change in te value of arguments x ,y will also be visible outside the function
+    y=x+y;//y=80
+    return x+y;//((x+y)+y)=130
+  endfunction
+    
+    initial
+      begin
+        
+        x=20;
+        y=30;
+        $display ("x=%0d y=%0d",x,y);
+        z=sum(x,y);
+        $display ("x=%0d y=%0d z=%0d",x,y,z);
+      end
+    endmodule
+/*
+Simulation result
+x=20 y=30
+x=50 y=80 z=130
+*/
+////////////////////////////////////////////////////////
+module defalue_value;
+  int x,y,z;
+  function int sum(int x=5,y=10,z=15);
+    x=x+y+z;//x=30
+    return x+y //(x+y+y)//30+10=40
+  endfunction
+
+  initial
+    begin
+      $display(sum());
+
+    end
+endmodule
