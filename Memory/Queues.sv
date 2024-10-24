@@ -94,3 +94,16 @@ module test();
       $display("content of q2 %0p",q2);*/
     end
 endmodule
+///////////////Queue inside queue//////////////
+module test;
+  typedef int q1[$];
+  q1 q2[$];
+  int q3[$];
+  
+  initial
+    begin
+      q3={1,2,3,4};
+      q2.push_back(q3);
+      $display("value of q1=%0p",q2);
+    end
+endmodule
