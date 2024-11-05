@@ -4,6 +4,8 @@
 2.An abstract class is also known as a virtual class.
 3.Method type, number of arguments, and return type (if required) should be the same for the virtual methods in their derived classes.
 4.It is not mandatory to add methods in the abstract class.
+5.for virtual class we can not allocate memory directly instead we need to extends another class from this virtual class will be 
+non-virtual in nature then we can allocate memory.
 ->usage:Common methods can be placed in the abstract class and these methods can be inherited by derived classes.
 pure virtual class- it is a prototype without body once a method declared pure virtual it has to be override 
 other wise it will throw error.
