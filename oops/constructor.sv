@@ -36,14 +36,13 @@ endclass
 
 module top;
  test t;
-  	
-	initial 
+  initial 
     begin
-		t = new;
-  // When the class object is instantiated, then the constructor is
-  // implicitly defined by the tool and called
-      $display ("addr=%0d", pkt.addr);
-	end
+	t = new;
+   //t.addr=5; //in this case we  can initialize value using instance (t)of class
+  // When the class object is instantiated, then the constructor is implicitly defined by the tool and called
+  $display ("addr=%0d", pkt.addr);
+    end
 endmodule
 /*
 If the class does not have a new() function explicitly coded, an implicit new method will be automatically provided. 
