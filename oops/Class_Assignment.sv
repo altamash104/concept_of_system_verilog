@@ -1,6 +1,7 @@
 /*
---> Class is an encapsulation of properties and methods.
+--> Class is data type which  encapsulate the properties and methods.
 --> Instance of class is called object.
+--> Objects are the unique entity created from class. Objects are dynamic in nature, i.e, it is created dynamically during runtime.
 --> Object is pointed by handle.
 --> Object is created by the class constructor-new();
 */
