@@ -8,7 +8,7 @@
 //////////////explicity defined constructor///////////
 class test;
   bit [3:0] addr;
-//rand bit [3:0]addr;
+
 
   //The new() function is called a class constructor and is a way to initialize the class variables with some value. 
   //it does not have a return type and is non-blocking.
@@ -32,6 +32,7 @@ simulation output : addr=10; since it is intialize by value 10 in explicitly cal
 
 class test;
 	bit [3:0] addr;
+	//rand bit [3:0]addr;
   //the  function new() is not defined here
 endclass
 
@@ -40,6 +41,7 @@ module top;
   initial 
     begin
 	t = new;
+    //t.randomize();
    //t.addr=5; //in this case we  can initialize value using instance (t)of class
   // When the class object is instantiated, then the constructor is implicitly defined by the tool and called
 	$display ("addr=%0d", t.addr);
