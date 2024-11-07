@@ -2,8 +2,8 @@
 Q. write a code to come out of the array in between while displaying.
 */
 module test;
-  int a[10]; //i have taken size of an array arbitrarily as 10
-
+  int a[10];
+  
   initial
     begin
       int i;
@@ -12,12 +12,16 @@ module test;
         a[i]=$urandom_range(1,20);
         i++;
         end
-          foreach(a[i])
+      $display("//*************before using break************//");
+      		foreach(a[i])
+           $display("a[%0d]=%0d",i,a[i]);
+          
+      $display("//*************after using break************//");
+      		foreach(a[i])
             begin
-          $display("a[%0d]=%0d",i,a[i]);
-            
-              if(i==($size(a))/2) // after iterating half of the element it will come out
-          break;
-          end
-      end
+           if(i==($size(a))/2)
+                break;
+              $display("a[%0d]=%0d",i,a[i]);
+                end
+            end
 endmodule
