@@ -264,3 +264,51 @@ module top;
     end
 
 endmodule
+        
+//////////////////////////////////////////////
+module test;
+ 
+  event ev1,ev2,ev3;
+  
+  initial
+   begin
+      fork
+        begin :b1
+           ->ev1;
+          $display("Thread 1");
+        
+        end:b1
+        
+        begin:b2
+          ->ev2;
+          $display("Thread 2");
+        end:b2
+         
+        begin:b3
+         #0;
+            ->ev3;
+          $display("Thread 3");
+        
+        end:b3
+        
+       
+      join_any
+     	wait(ev1.triggered);
+      	
+      $display("final  Thread1");
+		  wait(ev2.triggered);
+      $display("final  Thread2");
+      wait(ev3.triggered);
+    
+      $display("final  Thread3");
+      
+    end
+endmodule
+          /*
+Thread 1
+final  Thread1
+Thread 2
+final  Thread2
+Thread 3
+final  Thread3
+          */
