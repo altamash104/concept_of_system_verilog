@@ -1,3 +1,8 @@
+/*
+1.packed array contains single-bit data types like reg,logic,bit or enumerated types .
+2.they must be represented as contiguous sets of bits.
+*/
+
 module test;
   
   bit [7:0]my_array;
