@@ -6,6 +6,7 @@ Types of Mailbox
 1.Bounded type : size of mailbox is fixed ,if mailbox is full then no further data can be placed inside until any data element is fetched.
     syntax mailbox m_box=new[4];//it can hold only max 4 data element
 2.Unbounded type: size of mailbox is unlimited, user can be place and retrive any number of data elements.
+    syntax mailbox m_box=new[]
 3.Parameterized mailbox: it can be used when data type is fixed ,it can deal with only particular data type.
 
 Methods:
