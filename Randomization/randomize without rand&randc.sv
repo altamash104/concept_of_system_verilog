@@ -17,3 +17,29 @@ endclass
          end
      end
  endmodule
+
+////////////////////////////////////////////////////////////
+//--> here one property is randomized but another is not then how will you randomize other property without passing as an argument to randomize key word 
+class test;
+  
+   rand int a;
+   int b;
+  
+  function void post_randomize();
+    b=a;
+  endfunction
+                
+endclass
+ 
+ module tb;
+   test t;
+   initial
+     begin
+       t=new;
+       repeat(10)
+         begin
+           t.randomize();
+           $display("%d",t.b);
+         end
+     end
+ endmodule
