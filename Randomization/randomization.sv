@@ -1,3 +1,10 @@
+/*
+Randomization failed due to
+rand_mode(0)
+range_conflict
+constraint conflict
+*/
+
 class test;
   rand bit [15:0] a;
   rand bit [3:0] b;
