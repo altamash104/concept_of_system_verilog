@@ -16,3 +16,23 @@ transaction t_h
       $display("addr=%0d",t_h.addr);
     end
 endmodule
+
+/*
+set membership of an array
+*/
+class transaction;
+  rand bit [3:0]addr;
+  bit[3:0] addr_previous[]={1,2,3,5,8,10,11};
+  constraint c{addr inside {addr_previous};}
+endclass
+
+module top;
+  transaction trans_h;
+
+  initial
+    begin
+      trans_h=new;
+      trans_h.randomize();
+      $display("addr=%0d",trans_h.addr);
+    end
+endmodule
