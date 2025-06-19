@@ -2,7 +2,6 @@
 1.polymorphism in sv provides an ability to an object to take on many form.
 2.it allow parent to access child class method and properties.
 3.polymorphism and inheretance differ from each other in way that in case of polymorphism method name should be same and virtual.
-4."final" keyword is used to stop further overriding of extended class.
 */
 class parent ;
   virtual function void display();
