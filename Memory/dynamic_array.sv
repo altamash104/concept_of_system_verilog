@@ -9,7 +9,6 @@
        dynamic array method: new[] Allocate the memory
        Return the size of an array : size()
        Delete all the elements of an array : delete()
-       
 */
 \\\\\\\\\\\\\\\\----- dynamic array initialization -----/////////////////////
 module da_array();
