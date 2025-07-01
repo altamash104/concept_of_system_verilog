@@ -68,9 +68,9 @@ module test;
     
     /*
      wait(ev1.triggered);
-      wait(ev2.triggered);
-      wait(ev3.triggered);
-*/  
+     wait(ev2.triggered);
+     wait(ev3.triggered);
+    */  
        $display("D");
     end
 
@@ -176,9 +176,9 @@ endmodule
 ////////////////////////////////////////////////////////////
 //fork_join to fork_join_any
 module top;
-
-    // NOTE : Ideally its not possible to exactly replicate fork-join_none behaviour using fork-join as in this example you'll see that the other threads are killed, when in fact in fork-join_none, the threads are still active in background.
-
+/* NOTE : Ideally its not possible to exactly replicate fork-join_none behaviour using fork-join as in this example you'll see that the other threads are killed,
+	when in fact in fork-join_none, the threads are still active in background.
+*/
     initial 
     begin
         fork
