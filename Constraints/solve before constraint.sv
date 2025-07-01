@@ -2,7 +2,7 @@
 solve before constraint is a directive in SystemVerilog that specifies the solve order between random variables.
 
 It means:
-The randomizer will first solve the value of one variable,(solvw x before y means means first a will be solved the constraint will be applied)
+The randomizer will first solve the value of one variable,(solve x before y means means first a will be solved the constraint will be applied)
 Then it will solve the constraint for the second variable.
 This ensures that there is no violation of dependencies between them.
 It actually reduces the repeatition of randomization in order to get perfect result.
