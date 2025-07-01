@@ -1,5 +1,5 @@
 /*
-1.It is used restrict the range of randomization.
+1.It is used to restrict the range of randomization.
 2.Class constraint are permanent constraint.we can disable it since they are named constraint.
 3.Inline constraint is a temporary constraint.
 4.These contraint are "temporary or one time " in nature used with randomization function directly without any name to it.
