@@ -2,8 +2,6 @@
 when have ambiguity between LHS AND RHS property or we can say class property and local property of the function we use this keyword  
 
 */
-
-
 class this_keyword;
   int a,b;
   
