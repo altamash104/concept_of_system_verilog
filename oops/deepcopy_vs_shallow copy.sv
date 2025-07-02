@@ -1,11 +1,11 @@
 /*
 ## Shallow copy-
-1.only properties of parent class are copied not the objects of subclass.
+1.Only properties of parent class are copied not the objects of subclass.
 2.changes made to the objects through one instance reflect in the other instance because they share the same underlying objects
 
 ## Deep copy-
 1.Both data and Objects in the parent class are copied.
-2.here user defined copy method is required.
+2.Here user defined copy method is required.
 3.This method creates new objects for properties, ensuring that changes made to one instance do not affect the other.
 */
 
