@@ -21,9 +21,7 @@ class A;
 endclass  
 
 class B;
-  
   int  i=10;
-  
   A a=new;
   
   function B copy();
