@@ -7,7 +7,6 @@
 1.Both data and Objects in the parent class are copied.
 2.here user defined copy method is required.
 3.This method creates new objects for properties, ensuring that changes made to one instance do not affect the other.
-
 */
 
 //////////////////////Shallow copy///////////////////////
@@ -59,7 +58,6 @@ value of b2.i=20
 value of b2.a.j=30
 change made in one instances b1 is visible to another instances b2.
 */
-
 //////////////////////deep copy/////////////////////////
 
 class A;
