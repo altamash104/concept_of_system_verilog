@@ -1,7 +1,7 @@
 /*
 write a constraint to generate 10 random number in an array.the range of each element should be between 10 to 30.
 write a code to generate 10 elements in a queue with the following conditons.
-  eg- queue[0]=array[0] -0 and queue[1]=array[1] and so on
+  eg- queue[0]=array[0] -0 and queue[1]=array[1] and so on..
 */
 
 class test;
