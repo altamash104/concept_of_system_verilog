@@ -5,64 +5,37 @@
 */
 class parent ;
   virtual function void display();
-    $display("I am the parent");
-  endfunction
-endclass
-
-class child;
-  virtual function void display();
-    $display("I am your child");
-  endfunction
-endclass
-
-module polymorphism;
-  parent p_h;
-  child c_h;
-  initial
-    begin
-      p_h=new;
-      p_h.display():
-    end
-endmodule
-
-/*
-A parent class handle is assigned to the child class (child_class_handle = parent_class_handle)
-*/
-
-class parent;
-  bit [31:0] data;
-  int id;
-  
-  function void display();
-    $display("Base: Value of data = %0d, id = %0d", data, id);
+    $display("Parent class method");
   endfunction
 endclass
 
 class child extends parent;
-   
-  function void display();
-    $display("Child: Value of data = %0d, id = %0d", data, id);
+   virtual function void display();
+     $display("child class method");
   endfunction
 endclass
 
-module class_example;
-  initial begin
-    parent p_h;
-    child c_h;
-    c_h = new();
-
-    p_h = c_h; // or $cast(p_h, c_h);
-    $cast(c_h, p_h);
-
-    p_h.data = 10;
-    p_h.id   = 1;
-    
-    c_h.data = 5;
-    c_h.id   = 2;
-    
-    c_h.display();
-  end
+module casting;
+  parent p_h;
+  child c_h1,c_h2;
+  
+  initial
+    begin
+      p_h=new;
+      c_h1=new;
+      c_h2=new;
+      
+      p_h=c_h1;//this is legal assignment
+      
+      if($cast(c_h2,p_h))//actualy here after assignment of p_h=ch_1 ,parent becomes child both have same type 
+        begin
+          p_h.display();//access child class method
+          c_h1.display();//
+        end
+    end
 endmodule
+
 /*
-Child: Value of data = 5, id = 2
+child class method
+child class method
 */
